@@ -1,0 +1,36 @@
+@use 'colors' as colors;
+@use 'sizes' as sizes;
+
+@mixin emit-map($map, $prefix) {
+  @each $name, $value in $map {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+:root {
+  // Brand colors
+  @include emit-map(colors.$brand-colors, 'color');
+
+  // Semantic colors
+  @include emit-map(colors.$semantic-colors, 'color');
+
+  // Spacing
+  @include emit-map(sizes.$space, 'space');
+
+  // Radius
+  --radius: #{sizes.$radius-base};
+  @include emit-map(sizes.$radius, 'radius');
+
+  // Typography
+  @include emit-map(sizes.$text, 'text');
+  @include emit-map(sizes.$font-weight, 'font-weight');
+  @include emit-map(sizes.$leading, 'leading');
+
+  @each $name, $stack in sizes.$font-family {
+    --font-#{$name}: #{$stack};
+  }
+
+  // Layout
+  @include emit-map(sizes.$container, 'container');
+  @include emit-map(sizes.$icon, 'icon');
+}

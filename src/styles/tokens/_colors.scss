@@ -1,0 +1,36 @@
+// NexaCart brand + semantic color tokens (oklch, from dailtycart-demo).
+
+$brand-colors: (
+  paper: rgb(246, 240, 220),
+  panel: oklch(0.985 0.005 84),
+  ink: oklch(0.218 0.008 60),
+  mute: oklch(0.552 0.014 74),
+  line: oklch(0.901 0.014 84),
+  brand: #2874f0,
+  ember: #fb641b,
+  ember-soft: oklch(0.564 0.135 42 / 10%),
+  positive: oklch(0.52 0.09 155),
+  caution: oklch(0.66 0.12 80),
+);
+
+$semantic-colors: (
+  background: var(--color-paper),
+  foreground: var(--color-ink),
+  card: var(--color-panel),
+  card-foreground: var(--color-ink),
+  popover: var(--color-panel),
+  popover-foreground: var(--color-ink),
+  primary: var(--color-ink),
+  primary-foreground: var(--color-paper),
+  secondary: oklch(0.94 0.011 84),
+  secondary-foreground: var(--color-ink),
+  muted: oklch(0.94 0.011 84),
+  muted-foreground: var(--color-mute),
+  accent: var(--color-ember),
+  accent-foreground: var(--color-paper),
+  destructive: oklch(0.55 0.19 27),
+  destructive-foreground: var(--color-paper),
+  border: var(--color-line),
+  input: var(--color-line),
+  ring: var(--color-ember),
+);
